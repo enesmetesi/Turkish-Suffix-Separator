@@ -1,0 +1,16 @@
+{
+  "name": "turkish-suffix-separator",
+  "version": "0.1.0",
+  "description": "Rule-based, in-browser Turkish morphological segmenter for a Chrome extension aimed at Turkish learners.",
+  "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "build:lexicon": "node scripts/build-lexicon.mjs",
+    "report": "node scripts/report.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
