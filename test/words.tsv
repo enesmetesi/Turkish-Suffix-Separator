@@ -1,0 +1,707 @@
+# Hand-checked test words for the analyzer.
+# Format: word <TAB> root lemma <TAB> suffixes as surface:Id, space separated ("-" = no suffix)
+# The test passes when this reading is among the analyzer's readings.
+# Verb lemmas are written without -mek/-mak (git, gel, oku).
+
+# --- Plural ---
+evler	ev	ler:Pl
+kitaplar	kitap	lar:Pl
+arabalar	araba	lar:Pl
+kediler	kedi	ler:Pl
+okullar	okul	lar:Pl
+gözler	göz	ler:Pl
+çocuklar	çocuk	lar:Pl
+kuşlar	kuş	lar:Pl
+günler	gün	ler:Pl
+yollar	yol	lar:Pl
+kalemler	kalem	ler:Pl
+sorular	soru	lar:Pl
+öğrenciler	öğrenci	ler:Pl
+kadınlar	kadın	lar:Pl
+adamlar	adam	lar:Pl
+şehirler	şehir	ler:Pl
+masalar	masa	lar:Pl
+köprüler	köprü	ler:Pl
+dağlar	dağ	lar:Pl
+elmalar	elma	lar:Pl
+
+# --- Possessive ---
+evim	ev	im:P1sg
+evin	ev	in:P2sg
+evi	ev	i:P3sg
+evimiz	ev	imiz:P1pl
+eviniz	ev	iniz:P2pl
+evleri	ev	leri:P3pl
+arabam	araba	m:P1sg
+araban	araba	n:P2sg
+arabası	araba	sı:P3sg
+arabamız	araba	mız:P1pl
+arabanız	araba	nız:P2pl
+arabaları	araba	ları:P3pl
+okulum	okul	um:P1sg
+okulun	okul	un:P2sg
+okulu	okul	u:P3sg
+okulumuz	okul	umuz:P1pl
+gözüm	göz	üm:P1sg
+gözün	göz	ün:P2sg
+gözü	göz	ü:P3sg
+gözümüz	göz	ümüz:P1pl
+annem	anne	m:P1sg
+annen	anne	n:P2sg
+annesi	anne	si:P3sg
+annemiz	anne	miz:P1pl
+anneniz	anne	niz:P2pl
+anneleri	anne	leri:P3pl
+babam	baba	m:P1sg
+babası	baba	sı:P3sg
+kitabım	kitap	ım:P1sg
+kitabın	kitap	ın:P2sg
+kitabı	kitap	ı:P3sg
+kitabımız	kitap	ımız:P1pl
+kitapları	kitap	ları:P3pl
+köpeğim	köpek	im:P1sg
+köpeği	köpek	i:P3sg
+odam	oda	m:P1sg
+odası	oda	sı:P3sg
+ütüsü	ütü	sü:P3sg
+kuzum	kuzu	m:P1sg
+kuzusu	kuzu	su:P3sg
+evlerim	ev	ler:Pl im:P1sg
+evlerimiz	ev	ler:Pl imiz:P1pl
+evleri	ev	ler:Pl i:P3sg
+kitaplarım	kitap	lar:Pl ım:P1sg
+kitaplarımız	kitap	lar:Pl ımız:P1pl
+arabalarınız	araba	lar:Pl ınız:P2pl
+gözlerin	göz	ler:Pl in:P2sg
+dostlarımız	dost	lar:Pl ımız:P1pl
+
+# --- Cases ---
+evi	ev	i:Acc
+eve	ev	e:Dat
+evde	ev	de:Loc
+evden	ev	den:Abl
+evin	ev	in:Gen
+evle	ev	le:Ins
+arabayı	araba	yı:Acc
+arabaya	araba	ya:Dat
+arabada	araba	da:Loc
+arabadan	araba	dan:Abl
+arabanın	araba	nın:Gen
+arabayla	araba	yla:Ins
+okulu	okul	u:Acc
+okula	okul	a:Dat
+okulda	okul	da:Loc
+okuldan	okul	dan:Abl
+okulun	okul	un:Gen
+okulla	okul	la:Ins
+kitapta	kitap	ta:Loc
+kitaptan	kitap	tan:Abl
+kitaba	kitap	a:Dat
+kitabı	kitap	ı:Acc
+kitabın	kitap	ın:Gen
+kitapla	kitap	la:Ins
+sokakta	sokak	ta:Loc
+sokağa	sokak	a:Dat
+sokaktan	sokak	tan:Abl
+sokağı	sokak	ı:Acc
+ağaçta	ağaç	ta:Loc
+ağaca	ağaç	a:Dat
+ağacı	ağaç	ı:Acc
+ağaçtan	ağaç	tan:Abl
+işte	iş	te:Loc
+işten	iş	ten:Abl
+işe	iş	e:Dat
+parkta	park	ta:Loc
+parka	park	a:Dat
+otobüste	otobüs	te:Loc
+otobüse	otobüs	e:Dat
+otobüsten	otobüs	ten:Abl
+kediyi	kedi	yi:Acc
+kediye	kedi	ye:Dat
+kedide	kedi	de:Loc
+kedinin	kedi	nin:Gen
+kediyle	kedi	yle:Ins
+suyu	su	yu:Acc
+suya	su	ya:Dat
+suda	su	da:Loc
+sudan	su	dan:Abl
+denizde	deniz	de:Loc
+denize	deniz	e:Dat
+denizden	deniz	den:Abl
+gözden	göz	den:Abl
+göze	göz	e:Dat
+ülkede	ülke	de:Loc
+ülkeye	ülke	ye:Dat
+ülkenin	ülke	nin:Gen
+kalemle	kalem	le:Ins
+kalemi	kalem	i:Acc
+masada	masa	da:Loc
+masaya	masa	ya:Dat
+masanın	masa	nın:Gen
+kapıda	kapı	da:Loc
+kapıya	kapı	ya:Dat
+kapıdan	kapı	dan:Abl
+yolda	yol	da:Loc
+yola	yol	a:Dat
+yoldan	yol	dan:Abl
+evlerde	ev	ler:Pl de:Loc
+evlere	ev	ler:Pl e:Dat
+evlerden	ev	ler:Pl den:Abl
+evlerin	ev	ler:Pl in:Gen
+kitapları	kitap	lar:Pl ı:Acc
+kitaplara	kitap	lar:Pl a:Dat
+kitaplarda	kitap	lar:Pl da:Loc
+çocuklara	çocuk	lar:Pl a:Dat
+çocukların	çocuk	lar:Pl ın:Gen
+insanlarla	insan	lar:Pl la:Ins
+
+# --- Possessive + case, -ki ---
+evimde	ev	im:P1sg de:Loc
+evimden	ev	im:P1sg den:Abl
+evime	ev	im:P1sg e:Dat
+evini	ev	i:P3sg ni:Acc
+evine	ev	i:P3sg ne:Dat
+evinde	ev	i:P3sg nde:Loc
+evinden	ev	i:P3sg nden:Abl
+evinin	ev	i:P3sg nin:Gen
+arabamda	araba	m:P1sg da:Loc
+arabasını	araba	sı:P3sg nı:Acc
+arabasına	araba	sı:P3sg na:Dat
+arabasında	araba	sı:P3sg nda:Loc
+arabasından	araba	sı:P3sg ndan:Abl
+arabasıyla	araba	sı:P3sg yla:Ins
+kitabımı	kitap	ım:P1sg ı:Acc
+kitabında	kitap	ı:P3sg nda:Loc
+annemle	anne	m:P1sg le:Ins
+annesine	anne	si:P3sg ne:Dat
+babamın	baba	m:P1sg ın:Gen
+evlerimizde	ev	ler:Pl imiz:P1pl de:Loc
+kitaplarımızdan	kitap	lar:Pl ımız:P1pl dan:Abl
+evlerinde	ev	leri:P3pl nde:Loc
+okullarına	okul	ları:P3pl na:Dat
+evdeki	ev	de:Loc ki:Rel
+arabadaki	araba	da:Loc ki:Rel
+okuldaki	okul	da:Loc ki:Rel
+kitaptaki	kitap	ta:Loc ki:Rel
+evdekiler	ev	de:Loc ki:Rel ler:Pl
+evdekini	ev	de:Loc ki:Rel ni:Acc
+evinki	ev	in:Gen ki:Rel
+masadakiler	masa	da:Loc ki:Rel ler:Pl
+şehirdeki	şehir	de:Loc ki:Rel
+İstanbul'daki	İstanbul	da:Loc ki:Rel
+
+# --- Copula on nouns (ek-fiil) ---
+öğretmendi	öğretmen	di:CopPast
+öğretmenmiş	öğretmen	miş:CopNarr
+öğretmense	öğretmen	se:CopCond
+öğretmendir	öğretmen	dir:Cop
+öğretmenim	öğretmen	im:A1sg
+öğretmensin	öğretmen	sin:A2sg
+öğretmeniz	öğretmen	iz:A1pl
+öğretmensiniz	öğretmen	siniz:A2pl
+öğretmendim	öğretmen	di:CopPast m:A1sgK
+öğretmendik	öğretmen	di:CopPast k:A1plK
+öğrenciydi	öğrenci	ydi:CopPast
+öğrenciymiş	öğrenci	ymiş:CopNarr
+öğrenciyse	öğrenci	yse:CopCond
+öğrenciyim	öğrenci	yim:A1sg
+öğrenciyiz	öğrenci	yiz:A1pl
+öğrenciydim	öğrenci	ydi:CopPast m:A1sgK
+evdeyim	ev	de:Loc yim:A1sg
+evdeydi	ev	de:Loc ydi:CopPast
+evdeymiş	ev	de:Loc ymiş:CopNarr
+evdeyken	ev	de:Loc yken:While
+evdesin	ev	de:Loc sin:A2sg
+okuldaydım	okul	da:Loc ydı:CopPast m:A1sgK
+çocukken	çocuk	ken:While
+hastaydı	hasta	ydı:CopPast
+hastayım	hasta	yım:A1sg
+güzeldi	güzel	di:CopPast
+güzelmiş	güzel	miş:CopNarr
+vardı	var	dı:CopPast
+varsa	var	sa:CopCond
+yoktu	yok	tu:CopPast
+yokmuş	yok	muş:CopNarr
+değilim	değil	im:A1sg
+değildi	değil	di:CopPast
+değilse	değil	se:CopCond
+mutluyum	mutlu	yum:A1sg
+yorgunum	yorgun	um:A1sg
+evdeydim	ev	de:Loc ydi:CopPast m:A1sgK
+
+# --- Verb tenses (positive, 3rd singular) ---
+geldi	gel	di:Past
+gitti	git	ti:Past
+yaptı	yap	tı:Past
+okudu	oku	du:Past
+gördü	gör	dü:Past
+baktı	bak	tı:Past
+konuştu	konuş	tu:Past
+başladı	başla	dı:Past
+geldim	gel	di:Past m:A1sgK
+gelmiş	gel	miş:Narr
+gitmiş	git	miş:Narr
+yapmış	yap	mış:Narr
+okumuş	oku	muş:Narr
+görmüş	gör	müş:Narr
+olmuş	ol	muş:Narr
+geliyor	gel	iyor:Prog
+gidiyor	git	iyor:Prog
+yapıyor	yap	ıyor:Prog
+okuyor	oku	uyor:Prog
+görüyor	gör	üyor:Prog
+başlıyor	başla	ıyor:Prog
+bekliyor	bekle	iyor:Prog
+söylüyor	söyle	üyor:Prog
+anlıyor	anla	ıyor:Prog
+yürüyor	yürü	üyor:Prog
+diyor	de	iyor:Prog
+yiyor	ye	iyor:Prog
+oluyor	ol	uyor:Prog
+gelecek	gel	ecek:Fut
+gidecek	git	ecek:Fut
+yapacak	yap	acak:Fut
+okuyacak	oku	yacak:Fut
+görecek	gör	ecek:Fut
+başlayacak	başla	yacak:Fut
+diyecek	de	yecek:Fut
+yiyecek	ye	yecek:Fut
+olacak	ol	acak:Fut
+gelir	gel	ir:Aor
+gider	git	er:Aor
+yapar	yap	ar:Aor
+okur	oku	r:Aor
+görür	gör	ür:Aor
+alır	al	ır:Aor
+bilir	bil	ir:Aor
+bulur	bul	ur:Aor
+olur	ol	ur:Aor
+der	de	r:Aor
+yer	ye	r:Aor
+başlar	başla	r:Aor
+konuşur	konuş	ur:Aor
+çalışır	çalış	ır:Aor
+eder	et	er:Aor
+bakar	bak	ar:Aor
+gelmeli	gel	meli:Nec
+yapmalı	yap	malı:Nec
+okumalı	oku	malı:Nec
+gitmeli	git	meli:Nec
+gelse	gel	se:Cond
+yapsa	yap	sa:Cond
+okusa	oku	sa:Cond
+gitse	git	se:Cond
+geleyim	gel	e:Opt yim:A1sgOpt
+gelelim	gel	e:Opt lim:A1plOpt
+yapalım	yap	a:Opt lım:A1plOpt
+okuyalım	oku	ya:Opt lım:A1plOpt
+gidelim	git	e:Opt lim:A1plOpt
+gelsin	gel	sin:Imp3sg
+gelin	gel	in:Imp2pl
+geliniz	gel	iniz:Imp2plF
+gelsinler	gel	sinler:Imp3pl
+okuyun	oku	yun:Imp2pl
+yapsın	yap	sın:Imp3sg
+gel	gel	-
+oku	oku	-
+
+# --- Person endings ---
+geldin	gel	di:Past n:A2sgK
+geldik	gel	di:Past k:A1plK
+geldiniz	gel	di:Past niz:A2plK
+geldiler	gel	di:Past ler:A3pl
+yaptım	yap	tı:Past m:A1sgK
+gittik	git	ti:Past k:A1plK
+okudular	oku	du:Past lar:A3pl
+geliyorum	gel	iyor:Prog um:A1sg
+geliyorsun	gel	iyor:Prog sun:A2sg
+geliyoruz	gel	iyor:Prog uz:A1pl
+geliyorsunuz	gel	iyor:Prog sunuz:A2pl
+geliyorlar	gel	iyor:Prog lar:A3pl
+okuyorum	oku	uyor:Prog um:A1sg
+gidiyoruz	git	iyor:Prog uz:A1pl
+geleceğim	gel	eceğ:Fut im:A1sg
+geleceksin	gel	ecek:Fut sin:A2sg
+geleceğiz	gel	eceğ:Fut iz:A1pl
+geleceksiniz	gel	ecek:Fut siniz:A2pl
+gelecekler	gel	ecek:Fut ler:A3pl
+yapacağım	yap	acağ:Fut ım:A1sg
+okuyacağız	oku	yacağ:Fut ız:A1pl
+gideceğim	git	eceğ:Fut im:A1sg
+gelirim	gel	ir:Aor im:A1sg
+gelirsin	gel	ir:Aor sin:A2sg
+geliriz	gel	ir:Aor iz:A1pl
+gelirler	gel	ir:Aor ler:A3pl
+yaparım	yap	ar:Aor ım:A1sg
+okuruz	oku	r:Aor uz:A1pl
+gelmişim	gel	miş:Narr im:A1sg
+gelmişsin	gel	miş:Narr sin:A2sg
+gelmişiz	gel	miş:Narr iz:A1pl
+gelmişler	gel	miş:Narr ler:A3pl
+gelsem	gel	se:Cond m:A1sgK
+gelsen	gel	se:Cond n:A2sgK
+gelsek	gel	se:Cond k:A1plK
+gelseler	gel	se:Cond ler:A3pl
+gelmeliyim	gel	meli:Nec yim:A1sg
+gelmeliyiz	gel	meli:Nec yiz:A1pl
+gelmelisin	gel	meli:Nec sin:A2sg
+yapmalıyız	yap	malı:Nec yız:A1pl
+
+# --- Copula after tense ---
+geliyordu	gel	iyor:Prog du:CopPast
+geliyordum	gel	iyor:Prog du:CopPast m:A1sgK
+geliyorduk	gel	iyor:Prog du:CopPast k:A1plK
+geliyormuş	gel	iyor:Prog muş:CopNarr
+geliyorsa	gel	iyor:Prog sa:CopCond
+geliyorlardı	gel	iyor:Prog lar:A3pl dı:CopPast
+gelecekti	gel	ecek:Fut ti:CopPast
+gelecektim	gel	ecek:Fut ti:CopPast m:A1sgK
+gelecekmiş	gel	ecek:Fut miş:CopNarr
+gelecekse	gel	ecek:Fut se:CopCond
+gelirdi	gel	ir:Aor di:CopPast
+gelirdim	gel	ir:Aor di:CopPast m:A1sgK
+gelirmiş	gel	ir:Aor miş:CopNarr
+gelirse	gel	ir:Aor se:CopCond
+gelirsem	gel	ir:Aor se:CopCond m:A1sgK
+gelmişti	gel	miş:Narr ti:CopPast
+gelmiştim	gel	miş:Narr ti:CopPast m:A1sgK
+gelmişse	gel	miş:Narr se:CopCond
+gelmiştir	gel	miş:Narr tir:Cop
+gelmişlerdir	gel	miş:Narr ler:A3pl dir:Cop
+geldiyse	gel	di:Past yse:CopCond
+gelseydi	gel	se:Cond ydi:CopPast
+gelseydim	gel	se:Cond ydi:CopPast m:A1sgK
+gelmeliydi	gel	meli:Nec ydi:CopPast
+gelmeliymiş	gel	meli:Nec ymiş:CopNarr
+gelecekmişim	gel	ecek:Fut miş:CopNarr im:A1sg
+gelirken	gel	ir:Aor ken:While
+geliyorken	gel	iyor:Prog ken:While
+gidecektir	git	ecek:Fut tir:Cop
+gidemeyeceklermiş	git	eme:Unable yecek:Fut ler:A3pl miş:CopNarr
+
+# --- Negation, ability ---
+gelmedi	gel	me:Neg di:Past
+gelmedim	gel	me:Neg di:Past m:A1sgK
+gitmedi	git	me:Neg di:Past
+yapmadı	yap	ma:Neg dı:Past
+okumadı	oku	ma:Neg dı:Past
+gelmemiş	gel	me:Neg miş:Narr
+yapmamış	yap	ma:Neg mış:Narr
+gelmiyor	gel	m:Neg iyor:Prog
+yapmıyor	yap	m:Neg ıyor:Prog
+okumuyor	oku	m:Neg uyor:Prog
+görmüyor	gör	m:Neg üyor:Prog
+gelmiyorum	gel	m:Neg iyor:Prog um:A1sg
+anlamıyorum	anla	m:Neg ıyor:Prog um:A1sg
+bilmiyorum	bil	m:Neg iyor:Prog um:A1sg
+gelmeyecek	gel	me:Neg yecek:Fut
+yapmayacak	yap	ma:Neg yacak:Fut
+gelmeyeceğim	gel	me:Neg yeceğ:Fut im:A1sg
+gelmez	gel	me:Neg z:AorNeg
+yapmaz	yap	ma:Neg z:AorNeg
+okumaz	oku	ma:Neg z:AorNeg
+gelmezsin	gel	me:Neg z:AorNeg sin:A2sg
+gelmezler	gel	me:Neg z:AorNeg ler:A3pl
+gelmem	gel	me:Neg m:A1sg
+yapmam	yap	ma:Neg m:A1sg
+gelmeyiz	gel	me:Neg yiz:A1pl
+gelmezdi	gel	me:Neg z:AorNeg di:CopPast
+gelmezse	gel	me:Neg z:AorNeg se:CopCond
+gelmemeli	gel	me:Neg meli:Nec
+gelmese	gel	me:Neg se:Cond
+gelme	gel	me:Neg
+yapma	yap	ma:Neg
+gelmesin	gel	me:Neg sin:Imp3sg
+gelmeyin	gel	me:Neg yin:Imp2pl
+gelmeyelim	gel	me:Neg ye:Opt lim:A1plOpt
+gelebilir	gel	ebil:Abil ir:Aor
+gelebilirim	gel	ebil:Abil ir:Aor im:A1sg
+yapabilir	yap	abil:Abil ir:Aor
+okuyabilir	oku	yabil:Abil ir:Aor
+gelebildi	gel	ebil:Abil di:Past
+gelebilecek	gel	ebil:Abil ecek:Fut
+gelebiliyor	gel	ebil:Abil iyor:Prog
+gelebilmeli	gel	ebil:Abil meli:Nec
+gelebilirdi	gel	ebil:Abil ir:Aor di:CopPast
+gelemedi	gel	eme:Unable di:Past
+gidemedi	git	eme:Unable di:Past
+yapamadı	yap	ama:Unable dı:Past
+okuyamadı	oku	yama:Unable dı:Past
+gelemiyor	gel	em:Unable iyor:Prog
+gelemez	gel	eme:Unable z:AorNeg
+gelemem	gel	eme:Unable m:A1sg
+gelemeyecek	gel	eme:Unable yecek:Fut
+gidemeyecek	git	eme:Unable yecek:Fut
+yapamam	yap	ama:Unable m:A1sg
+gelebilmedi	gel	ebil:Abil me:Neg di:Past
+
+# --- Voice (passive, causative, reciprocal) ---
+yapıldı	yap	ıl:Pass dı:Past
+yapılır	yap	ıl:Pass ır:Aor
+yapılıyor	yap	ıl:Pass ıyor:Prog
+görüldü	gör	ül:Pass dü:Past
+söylendi	söyle	n:Pass di:Past
+okundu	oku	n:Pass du:Past
+bilinir	bil	in:Pass ir:Aor
+alındı	al	ın:Pass dı:Past
+yazıldı	yaz	ıl:Pass dı:Past
+açıldı	aç	ıl:Pass dı:Past
+yaptırdı	yap	tır:Caus dı:Past
+yaptırıldı	yap	tır:Caus ıl:Pass dı:Past
+okuttu	oku	t:Caus tu:Past
+öldürdü	öl	dür:Caus dü:Past
+güldürdü	gül	dür:Caus dü:Past
+yazdırdı	yaz	dır:Caus dı:Past
+bekletti	bekle	t:Caus ti:Past
+oturttu	otur	t:Caus tu:Past
+görüştük	gör	üş:Recip tü:Past k:A1plK
+yazdırılacak	yaz	dır:Caus ıl:Pass acak:Fut
+yapılmadı	yap	ıl:Pass ma:Neg dı:Past
+söylenmiş	söyle	n:Pass miş:Narr
+okunabilir	oku	n:Pass abil:Abil ir:Aor
+yapılabilir	yap	ıl:Pass abil:Abil ir:Aor
+yaptırmak	yap	tır:Caus mak:Inf
+
+# --- Verbal nouns, participles, converbs ---
+gelmek	gel	mek:Inf
+gitmek	git	mek:Inf
+okumak	oku	mak:Inf
+yapmak	yap	mak:Inf
+gelmekte	gel	mek:Inf te:Loc
+gelmekten	gel	mek:Inf ten:Abl
+gelmekteyim	gel	mek:Inf te:Loc yim:A1sg
+gelmesi	gel	me:VNoun si:P3sg
+gelmesini	gel	me:VNoun si:P3sg ni:Acc
+gelmeye	gel	me:VNoun ye:Dat
+okuması	oku	ma:VNoun sı:P3sg
+gelmemiz	gel	me:VNoun miz:P1pl
+geliş	gel	iş:VNounIs
+gelişi	gel	iş:VNounIs i:P3sg
+gelen	gel	en:PartAn
+gelenler	gel	en:PartAn ler:Pl
+gelenlere	gel	en:PartAn ler:Pl e:Dat
+okuyan	oku	yan:PartAn
+yapan	yap	an:PartAn
+gelmeyen	gel	me:Neg yen:PartAn
+geldiğim	gel	diğ:PartDik im:P1sg
+geldiği	gel	diğ:PartDik i:P3sg
+geldiğimiz	gel	diğ:PartDik imiz:P1pl
+geldikleri	gel	dik:PartDik leri:P3pl
+geldiğimde	gel	diğ:PartDik im:P1sg de:Loc
+geldiğini	gel	diğ:PartDik i:P3sg ni:Acc
+yaptığım	yap	tığ:PartDik ım:P1sg
+gittiği	git	tiğ:PartDik i:P3sg
+bildiğim	bil	diğ:PartDik im:P1sg
+gelmediğini	gel	me:Neg diğ:PartDik i:P3sg ni:Acc
+gideceğim	git	eceğ:PartFut im:P1sg
+okuyacağı	oku	yacağ:PartFut ı:P3sg
+gelip	gel	ip:CvIp
+okuyup	oku	yup:CvIp
+gidip	git	ip:CvIp
+gelerek	gel	erek:CvArak
+okuyarak	oku	yarak:CvArak
+gelince	gel	ince:CvInca
+okuyunca	oku	yunca:CvInca
+gidince	git	ince:CvInca
+gelmeden	gel	meden:CvMadan
+yapmadan	yap	madan:CvMadan
+geleli	gel	eli:CvAli
+geldikçe	gel	dikçe:CvDikca
+okudukça	oku	dukça:CvDikca
+gelmeyince	gel	me:Neg yince:CvInca
+gelebilmek	gel	ebil:Abil mek:Inf
+gelmemek	gel	me:Neg mek:Inf
+gelmeyip	gel	me:Neg yip:CvIp
+deyince	de	yince:CvInca
+
+# --- Derivation ---
+şekerli	şeker	li:With
+tuzlu	tuz	lu:With
+sütlü	süt	lü:With
+evli	ev	li:With
+susuz	su	suz:Without
+evsiz	ev	siz:Without
+şekersiz	şeker	siz:Without
+parasız	para	sız:Without
+güzellik	güzel	lik:Ness
+iyilik	iyi	lik:Ness
+kitaplık	kitap	lık:Ness
+gözlük	göz	lük:Ness
+güzelliği	güzel	liğ:Ness i:P3sg
+işçi	iş	çi:Agt
+gözlükçü	göz	lük:Ness çü:Agt
+yolcu	yol	cu:Agt
+sütçü	süt	çü:Agt
+balıkçı	balık	çı:Agt
+yalancı	yalan	cı:Agt
+türkçe	türk	çe:Equ
+çocukça	çocuk	ça:Equ
+bence	ben	ce:Equ
+kedicik	kedi	cik:Dim
+bilimsel	bilim	sel:Sal
+kimyasal	kimya	sal:Sal
+güzelleşti	güzel	leş:Become ti:Past
+güzelleşmek	güzel	leş:Become mek:Inf
+temizledi	temiz	le:Verbal di:Past
+temizliyor	temiz	l:Verbal iyor:Prog
+öğretici	öğret	ici:AgtV
+okuyucu	oku	yucu:AgtV
+öğretmen	öğret	men:Man
+silgi	sil	gi:Instr
+sevgi	sev	gi:Instr
+askı	as	kı:Instr
+ölüm	öl	üm:Act
+seçim	seç	im:Act
+şekerliler	şeker	li:With ler:Pl
+tuzsuzdu	tuz	suz:Without du:CopPast
+evsizler	ev	siz:Without ler:Pl
+işçiler	iş	çi:Agt ler:Pl
+yolcular	yol	cu:Agt lar:Pl
+susuzluk	su	suz:Without luk:Ness
+
+# --- Sound changes: voicing, vowel drop, doubling, inverse harmony ---
+kitabı	kitap	ı:Acc
+dolabı	dolap	ı:Acc
+ağacı	ağaç	ı:Acc
+kanadı	kanat	ı:Acc
+çocuğu	çocuk	u:Acc
+köpeği	köpek	i:Acc
+rengi	renk	i:P3sg
+ayağı	ayak	ı:P3sg
+bıçağı	bıçak	ı:P3sg
+kulağı	kulak	ı:P3sg
+yemeği	yemek	i:P3sg
+gider	git	er:Aor
+gidiyorum	git	iyor:Prog um:A1sg
+ediyor	et	iyor:Prog
+edecek	et	ecek:Fut
+tadı	tat	ı:P3sg
+topu	top	u:Acc
+saçı	saç	ı:P3sg
+ipi	ip	i:Acc
+ağzı	ağız	ı:P3sg
+ağzım	ağız	ım:P1sg
+burnu	burun	u:P3sg
+oğlu	oğul	u:P3sg
+oğlum	oğul	um:P1sg
+alnı	alın	ı:P3sg
+şehri	şehir	i:P3sg
+şehre	şehir	e:Dat
+fikri	fikir	i:P3sg
+hakkı	hak	ı:P3sg
+hissi	his	i:P3sg
+saatler	saat	ler:Pl
+saati	saat	i:Acc
+saatte	saat	te:Loc
+golü	gol	ü:Acc
+harfi	harf	i:Acc
+kalbi	kalp	i:P3sg
+devleti	devlet	i:P3sg
+dikkati	dikkat	i:P3sg
+seferi	sefer	i:P3sg
+haberi	haber	i:P3sg
+
+# --- Pronouns, numbers, question particle, proper nouns ---
+beni	ben	i:Acc
+bende	ben	de:Loc
+benden	ben	den:Abl
+bana	ben	a:Dat
+benim	ben	im:Gen
+seni	sen	i:Acc
+sana	sen	a:Dat
+senin	sen	in:Gen
+onu	o	u:Acc
+ona	o	a:Dat
+onun	o	un:Gen
+onda	o	da:Loc
+ondan	o	dan:Abl
+onlar	o	lar:Pl
+onları	o	lar:Pl ı:Acc
+bunu	bu	u:Acc
+buna	bu	a:Dat
+bunda	bu	da:Loc
+bunlar	bu	lar:Pl
+şunu	şu	u:Acc
+bizi	biz	i:Acc
+bize	biz	e:Dat
+bizim	biz	im:Gen
+sizi	siz	i:Acc
+size	siz	e:Dat
+sizin	siz	in:Gen
+kendimi	kendi	m:P1sg i:Acc
+kendisi	kendi	si:P3sg
+ikinci	iki	nci:Ord
+üçüncü	üç	üncü:Ord
+dördüncü	dört	üncü:Ord
+birinci	bir	inci:Ord
+birer	bir	er:Dist
+ikişer	iki	şer:Dist
+altışar	altı	şar:Dist
+ikisi	iki	si:P3sg
+mi	mi	-
+mısın	mı	sın:A2sg
+miyim	mi	yim:A1sg
+musun	mu	sun:A2sg
+mıydı	mı	ydı:CopPast
+midir	mi	dir:Cop
+misiniz	mi	siniz:A2pl
+İstanbul'da	İstanbul	da:Loc
+İstanbul'dan	İstanbul	dan:Abl
+Ankara'ya	Ankara	ya:Dat
+Ali'nin	Ali	nin:Gen
+Ayşe'ye	Ayşe	ye:Dat
+Türkiye'de	Türkiye	de:Loc
+Türkiye'nin	Türkiye	nin:Gen
+Mehmet'e	Mehmet	e:Dat
+İzmir'e	İzmir	e:Dat
+
+# --- Longer chains ---
+gelemeyecekmişsin	gel	eme:Unable yecek:Fut miş:CopNarr sin:A2sg
+yapabileceğim	yap	abil:Abil eceğ:Fut im:A1sg
+okuyamıyorum	oku	yam:Unable ıyor:Prog um:A1sg
+görüşmek	gör	üş:Recip mek:Inf
+çalışıyorlardı	çalış	ıyor:Prog lar:A3pl dı:CopPast
+konuşamıyoruz	konuş	am:Unable ıyor:Prog uz:A1pl
+anlayamadım	anla	yama:Unable dı:Past m:A1sgK
+gidebilseydim	git	ebil:Abil se:Cond ydi:CopPast m:A1sgK
+evlerimizdekiler	ev	ler:Pl imiz:P1pl de:Loc ki:Rel ler:Pl
+arkadaşlarımızla	arkadaş	lar:Pl ımız:P1pl la:Ins
+öğrencilerimizden	öğrenci	ler:Pl imiz:P1pl den:Abl
+çocuklarınızın	çocuk	lar:Pl ınız:P2pl ın:Gen
+kitaplarındaki	kitap	ları:P3pl nda:Loc ki:Rel
+söyleyemedi	söyle	yeme:Unable di:Past
+bekleyecektik	bekle	yecek:Fut ti:CopPast k:A1plK
+yapılmayacak	yap	ıl:Pass ma:Neg yacak:Fut
+yazdırılmış	yaz	dır:Caus ıl:Pass mış:Narr
+okutulacak	oku	t:Caus ul:Pass acak:Fut
+geldiğimizde	gel	diğ:PartDik imiz:P1pl de:Loc
+yaptıklarını	yap	tık:PartDik ları:P3pl nı:Acc
+gelmediğimiz	gel	me:Neg diğ:PartDik imiz:P1pl
+düşünüyorum	düşün	üyor:Prog um:A1sg
+düşünmüyordum	düşün	m:Neg üyor:Prog du:CopPast m:A1sgK
+sevmiyorlar	sev	m:Neg iyor:Prog lar:A3pl
+istemiyorum	iste	m:Neg iyor:Prog um:A1sg
+istiyorum	iste	iyor:Prog um:A1sg
+istiyordu	iste	iyor:Prog du:CopPast
+öğreniyoruz	öğren	iyor:Prog uz:A1pl
+öğrenemedim	öğren	eme:Unable di:Past m:A1sgK
+bakabilir	bak	abil:Abil ir:Aor
+bakmayın	bak	ma:Neg yın:Imp2pl
+gülmeyin	gül	me:Neg yin:Imp2pl
+uyuyor	uyu	uyor:Prog
+uyumuyor	uyu	m:Neg uyor:Prog
+yüzüyor	yüz	üyor:Prog
+koşuyorlar	koş	uyor:Prog lar:A3pl
+dinliyorum	dinle	iyor:Prog um:A1sg
+dinlemedim	dinle	me:Neg di:Past m:A1sgK
+taşınıyoruz	taşı	n:Pass ıyor:Prog uz:A1pl
+kullanılıyor	kullan	ıl:Pass ıyor:Prog
+kullanılmış	kullan	ıl:Pass mış:Narr
+hazırlanıyor	hazırla	n:Pass ıyor:Prog
+anlaşıldı	anla	ş:Recip ıl:Pass dı:Past
+yaşıyorum	yaşa	ıyor:Prog um:A1sg
+yaşadığımız	yaşa	dığ:PartDik ımız:P1pl
+yaşadığım	yaşa	dığ:PartDik ım:P1sg
+çalıştığı	çalış	tığ:PartDik ı:P3sg
+oturduğum	otur	duğ:PartDik um:P1sg
+oturuyoruz	otur	uyor:Prog uz:A1pl
