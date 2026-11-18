@@ -1,0 +1,11 @@
+data/glosses.json contains short English meanings adapted from English
+Wiktionary (https://en.wiktionary.org/), Turkish entries, as extracted by
+wiktextract (Tatu Ylonen, https://kaikki.org/dictionary/Turkish/).
+
+Wiktionary content is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0):
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Changes: meanings were shortened to one line and limited to the roots in
+data/lexicon.json (scripts/build-glosses.mjs). data/glosses.json is shared
+under the same license, CC BY-SA 4.0.

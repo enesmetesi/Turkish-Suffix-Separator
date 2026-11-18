@@ -85,8 +85,16 @@ export function rootVariants(entry) {
 }
 
 export class Lexicon {
-  /** @param {string[]} entries lines in data/lexicon.json format */
-  constructor(entries) {
+  /**
+   * @param {string[]} entries lines in data/lexicon.json format
+   * @param {string[]} [glossEntries] lines in data/glosses.json format ("root pos\tgloss")
+   */
+  constructor(entries, glossEntries = []) {
+    this.glosses = new Map();
+    for (const line of glossEntries) {
+      const tab = line.indexOf('\t');
+      this.glosses.set(line.slice(0, tab), line.slice(tab + 1));
+    }
     this.bySurface = new Map();
     this.byLemma = new Map();
     this.maxLen = 0;
@@ -113,7 +121,24 @@ export class Lexicon {
     return this.byLemma.get(lemma) ?? [];
   }
 
-  static fromJSON(json) {
-    return new Lexicon(json.entries);
+  /**
+   * Short English meaning for a root. Falls back to another part of speech of
+   * the same kind (a noun's meaning for an adjective reading), and uses a
+   * proper-noun meaning ("a female given name") only for proper nouns.
+   */
+  gloss(lemma, pos) {
+    const exact = this.glosses.get(`${lemma} ${pos}`);
+    if (exact) return exact;
+    const order = pos === 'V' ? ['V'] : ['N', 'Adj', 'Pron', 'Num', 'Adv', 'Postp', 'Conj', 'Det', 'Interj', 'Ques'];
+    if (pos === 'Prop') order.push('Prop');
+    for (const p of order) {
+      const g = this.glosses.get(`${lemma} ${p}`);
+      if (g) return g;
+    }
+    return null;
+  }
+
+  static fromJSON(json, glossesJson = null) {
+    return new Lexicon(json.entries, glossesJson?.entries ?? []);
   }
 }

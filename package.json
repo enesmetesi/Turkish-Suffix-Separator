@@ -8,7 +8,9 @@
   "scripts": {
     "test": "node --test test/*.test.js",
     "build:lexicon": "node scripts/build-lexicon.mjs",
-    "report": "node scripts/report.mjs"
+    "report": "node scripts/report.mjs",
+    "build": "node scripts/build-extension.mjs",
+    "build:glosses": "node scripts/build-glosses.mjs"
   },
   "engines": {
     "node": ">=20"
