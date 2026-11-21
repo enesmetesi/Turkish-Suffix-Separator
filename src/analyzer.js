@@ -142,18 +142,21 @@ function walk(word, pos, stateName, prev, cond, harmony, ctx, path, results) {
   }
 }
 
-function formatResult(r) {
+function formatResult(r, lexicon) {
+  const lemmaKey = trLower(r.root.lemma);
   return {
     root: {
       lemma: r.root.lemma,
       pos: r.root.pos,
       surface: r.root.surface,
+      gloss: lexicon.gloss(lemmaKey, r.root.pos),
     },
     suffixes: r.suffixes.map((m) => ({
       id: m.id,
       surface: m.surface,
       en: SUFFIXES[m.id].en,
       tr: SUFFIXES[m.id].tr,
+      term: SUFFIXES[m.id].term,
     })),
     score: Math.round(r.score * 1000) / 1000,
   };
@@ -245,7 +248,7 @@ export class Analyzer {
       const key = dedupeKey(r);
       if (seen.has(key)) continue;
       seen.add(key);
-      out.push(formatResult(r));
+      out.push(formatResult(r, this.lexicon));
     }
     return out;
   }

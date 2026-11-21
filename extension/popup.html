@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Turkish Suffix Separator</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1c1d21; --muted: #6b6f7a; --line: #e3e5ea; --accent: #c2410c; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #1f2126; --fg: #eceef2; --muted: #9aa0ab; --line: #343741; --accent: #fb923c; } }
+  body { margin: 0; width: 300px; background: var(--bg); color: var(--fg); font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { padding: 14px 16px; }
+  h1 { font-size: 15px; margin: 0 0 2px; }
+  .sub { color: var(--muted); margin: 0 0 12px; }
+  fieldset { border: 0; padding: 0; margin: 0 0 12px; }
+  legend { font-weight: 600; margin-bottom: 4px; }
+  label { display: block; padding: 2px 0; cursor: pointer; }
+  select { font: inherit; }
+  .example { border-top: 1px solid var(--line); padding-top: 10px; color: var(--muted); font-size: 12px; }
+  .example b { color: var(--accent); font-weight: 600; }
+  footer { border-top: 1px solid var(--line); padding: 8px 16px; color: var(--muted); font-size: 11px; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Turkish Suffix Separator</h1>
+  <p class="sub">Rest the mouse on a Turkish word to see its root and suffixes.</p>
+  <fieldset>
+    <legend>When to show the card</legend>
+    <label><input type="radio" name="mode" value="turkish-pages"> On Turkish pages; Alt + hover elsewhere</label>
+    <label><input type="radio" name="mode" value="always"> On every page</label>
+    <label><input type="radio" name="mode" value="alt"> Only with Alt + hover</label>
+    <label><input type="radio" name="mode" value="off"> Off</label>
+  </fieldset>
+  <fieldset>
+    <legend>Delay</legend>
+    <select id="delay">
+      <option value="150">Short (0.15 s)</option>
+      <option value="300">Normal (0.3 s)</option>
+      <option value="600">Long (0.6 s)</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <legend>Grammar terms</legend>
+    <select id="terms">
+      <option value="both">Both (locative case - bulunma hâli)</option>
+      <option value="en">English (locative case)</option>
+      <option value="tr">Turkish (bulunma hâli)</option>
+    </select>
+  </fieldset>
+  <div class="example">gidemeyeceklermiş = git · <b>eme</b> · yecek · ler · miş<br>"apparently they won't be able to go"</div>
+</main>
+<footer>Works offline. Roots: Zemberek (Apache 2.0). Meanings: Wiktionary (CC BY-SA 4.0). <a href="licenses.html" target="_blank">Licenses</a></footer>
+<script src="popup.js"></script>
+</body>
+</html>
