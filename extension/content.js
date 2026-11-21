@@ -4,7 +4,7 @@
 (() => {
   'use strict';
 
-  const DEFAULTS = { mode: 'turkish-pages', delay: 300, terms: 'en' };
+  const DEFAULTS = { mode: 'turkish-pages', delay: 300, terms: 'both' };
   // mode: 'turkish-pages' = hover on Turkish pages, Alt + hover elsewhere
   //       'always'        = hover on every page
   //       'alt'           = only Alt + hover
@@ -102,7 +102,7 @@
     .card {
       --bg: #ffffff; --fg: #1c1d21; --muted: #6b6f7a; --line: #e3e5ea; --shadow: 0 6px 24px rgba(0,0,0,.16);
       --c0: #1c1d21; --c1: #c2410c; --c2: #1d4ed8; --c3: #047857; --c4: #7e22ce; --c5: #b91c1c; --c6: #0e7490;
-      position: fixed; z-index: 2147483647; max-width: 380px; min-width: 220px;
+      position: fixed; z-index: 2147483647; max-width: 480px; min-width: 220px;
       background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 10px;
       box-shadow: var(--shadow); padding: 10px 12px; font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
       text-align: left;

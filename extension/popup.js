@@ -1,4 +1,4 @@
-const DEFAULTS = { mode: 'turkish-pages', delay: 300, terms: 'en' };
+const DEFAULTS = { mode: 'turkish-pages', delay: 300, terms: 'both' };
 
 chrome.storage.sync.get(DEFAULTS, (s) => {
   const radio = document.querySelector(`input[name="mode"][value="${s.mode}"]`);

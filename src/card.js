@@ -48,11 +48,11 @@ function suffixNote(sfx, next) {
   return null;
 }
 
-/** Grammar term in the chosen language: 'en' (default), 'tr' or 'both'. */
+/** Grammar term: 'both' (default, "locative case - bulunma hâli"), 'en' or 'tr'. */
 function termOf(s, terms) {
   if (terms === 'tr') return s.tr;
-  if (terms === 'both') return `${s.term} · ${s.tr}`;
-  return s.term;
+  if (terms === 'en') return s.term;
+  return `${s.term} - ${s.tr}`;
 }
 
 function readingModel(reading, terms) {
@@ -87,7 +87,7 @@ function readingModel(reading, terms) {
  * @param {number} [options.maxOther] how many other readings to list
  * @param {'en'|'tr'|'both'} [options.terms] language of the grammar terms
  */
-export function buildCard(word, readings, { maxOther = 3, terms = 'en' } = {}) {
+export function buildCard(word, readings, { maxOther = 3, terms = 'both' } = {}) {
   if (!readings.length) return { word, recognized: false };
   const [best, ...rest] = readings;
   return {

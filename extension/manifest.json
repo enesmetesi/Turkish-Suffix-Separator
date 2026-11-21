@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Turkish Suffix Separator",
   "short_name": "Suffix Separator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Hover a Turkish word to see its root and every suffix, with what each one means. Works offline, no account.",
   "icons": {
     "16": "icons/icon16.png",

@@ -18,12 +18,12 @@ test('card for gidemeyeceklermiş', () => {
   assert.deepEqual(c.rows.slice(1).map((r) => r.meaning), ['cannot', 'will', 'they', 'reportedly / apparently']);
 });
 
-test('grammar terms in English by default, Turkish or both on request', () => {
+test('grammar terms in both languages by default, English or Turkish on request', () => {
   const r = analyzer.analyze('evde');
   const term = (opts) => buildCard('evde', r, opts).rows[1].term;
-  assert.equal(term(), 'locative case');
+  assert.equal(term(), 'locative case - bulunma hâli');
+  assert.equal(term({ terms: 'en' }), 'locative case');
   assert.equal(term({ terms: 'tr' }), 'bulunma hâli');
-  assert.equal(term({ terms: 'both' }), 'locative case · bulunma hâli');
 });
 
 test('every suffix has an English grammar term', async () => {
