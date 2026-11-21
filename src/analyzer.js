@@ -156,6 +156,7 @@ function formatResult(r, lexicon) {
       surface: m.surface,
       en: SUFFIXES[m.id].en,
       tr: SUFFIXES[m.id].tr,
+      term: SUFFIXES[m.id].term,
     })),
     score: Math.round(r.score * 1000) / 1000,
   };

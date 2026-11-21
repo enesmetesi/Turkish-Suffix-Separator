@@ -18,6 +18,19 @@ test('card for gidemeyeceklermiş', () => {
   assert.deepEqual(c.rows.slice(1).map((r) => r.meaning), ['cannot', 'will', 'they', 'reportedly / apparently']);
 });
 
+test('grammar terms in English by default, Turkish or both on request', () => {
+  const r = analyzer.analyze('evde');
+  const term = (opts) => buildCard('evde', r, opts).rows[1].term;
+  assert.equal(term(), 'locative case');
+  assert.equal(term({ terms: 'tr' }), 'bulunma hâli');
+  assert.equal(term({ terms: 'both' }), 'locative case · bulunma hâli');
+});
+
+test('every suffix has an English grammar term', async () => {
+  const { SUFFIXES } = await import('../src/suffixes.js');
+  for (const [id, s] of Object.entries(SUFFIXES)) assert.ok(s.term, id);
+});
+
 test('unknown word', () => {
   assert.deepEqual(card('xqzvt'), { word: 'xqzvt', recognized: false });
 });

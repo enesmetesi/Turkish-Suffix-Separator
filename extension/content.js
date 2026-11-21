@@ -4,7 +4,7 @@
 (() => {
   'use strict';
 
-  const DEFAULTS = { mode: 'turkish-pages', delay: 300 };
+  const DEFAULTS = { mode: 'turkish-pages', delay: 300, terms: 'en' };
   // mode: 'turkish-pages' = hover on Turkish pages, Alt + hover elsewhere
   //       'always'        = hover on every page
   //       'alt'           = only Alt + hover
@@ -224,7 +224,7 @@
     try {
       const analyzer = await loadAnalyzer();
       if (current !== hit) return; // pointer moved on while loading
-      const model = cardModule.buildCard(hit.word, analyzer.analyze(hit.word));
+      const model = cardModule.buildCard(hit.word, analyzer.analyze(hit.word), { terms: settings.terms });
       show(model, hit.rect);
     } catch (err) {
       console.warn('[Turkish Suffix Separator]', err);

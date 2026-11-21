@@ -48,7 +48,14 @@ function suffixNote(sfx, next) {
   return null;
 }
 
-function readingModel(reading) {
+/** Grammar term in the chosen language: 'en' (default), 'tr' or 'both'. */
+function termOf(s, terms) {
+  if (terms === 'tr') return s.tr;
+  if (terms === 'both') return `${s.term} · ${s.tr}`;
+  return s.term;
+}
+
+function readingModel(reading, terms) {
   const visible = reading.suffixes.filter((s) => s.surface || s.id === 'AorNeg');
   const segments = [{ text: reading.root.surface, kind: 'root', color: 0 }];
   let color = 1;
@@ -65,7 +72,7 @@ function readingModel(reading) {
     rows.push({
       part: s.surface ? `-${s.surface}` : '(Ø)',
       meaning: s.en,
-      term: s.tr,
+      term: termOf(s, terms),
       note: suffixNote(s, visible[i + 1]),
       color: c,
     });
@@ -76,17 +83,19 @@ function readingModel(reading) {
 /**
  * @param {string} word      the word as written on the page
  * @param {object[]} readings analyzer output, best first
- * @param {number} [maxOther] how many other readings to list
+ * @param {object} [options]
+ * @param {number} [options.maxOther] how many other readings to list
+ * @param {'en'|'tr'|'both'} [options.terms] language of the grammar terms
  */
-export function buildCard(word, readings, maxOther = 3) {
+export function buildCard(word, readings, { maxOther = 3, terms = 'en' } = {}) {
   if (!readings.length) return { word, recognized: false };
   const [best, ...rest] = readings;
   return {
     word,
     recognized: true,
-    ...readingModel(best),
+    ...readingModel(best, terms),
     others: rest.slice(0, maxOther).map((r) => {
-      const m = readingModel(r);
+      const m = readingModel(r, terms);
       return {
         text: m.segments.map((s) => s.text).join(' + '),
         summary: m.rows.slice(1).map((row) => row.meaning).join(', ') || m.rows[0].meaning,
